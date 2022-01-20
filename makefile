@@ -1,5 +1,5 @@
 all: clean
-	gcc print.c linked_list.c -o output
+	gcc linked_list.c array.c dataCLI.c -o output
 
 clean:
 	rm -f main

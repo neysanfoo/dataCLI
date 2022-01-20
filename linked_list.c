@@ -8,9 +8,7 @@ typedef struct LinkedListNode
     struct LinkedListNode *next;
 } LinkedListNode;
 
-#include "print.h"
-
-
+void printList(LinkedListNode *head);
 void PromptList();
 bool IsEmptyList(LinkedListNode *head);
 LinkedListNode *InsertAtStart(LinkedListNode *head, int data);
@@ -18,8 +16,7 @@ LinkedListNode *InsertAtEnd(LinkedListNode *head, int data);
 LinkedListNode *InsertAtN(LinkedListNode *head, int n, int data);
 LinkedListNode *DeleteAtN(LinkedListNode *head, int n);
 
-
-int main(void)
+int LinkedListMain(void)
 {
     LinkedListNode *head = NULL;
     int choice;
@@ -162,4 +159,37 @@ void PromptList()
             "5. Print List\n"
             "6. Exit\n"
             "Please choose an action: ");
+}
+
+void printListAddress(LinkedListNode *head)
+{
+    if (head == NULL)
+    {
+        printf("Empty list\n");
+        return;
+    }
+    printf("(%p, %p) --> ", &head, head);
+    while (head->next != NULL)
+    {
+        printf("(%p, %d, %p) --> ", head, head->data, head->next);
+        head = head -> next;
+    }
+    printf("(%p, %d, %p)", head, head->data, head->next);
+    printf("\n");
+}
+
+void printList(LinkedListNode *head)
+{
+    if (head == NULL)
+    {
+        printf("Empty list\n");
+        return;
+    }
+    while (head->next != NULL)
+    {
+        printf("%d --> ", head->data);
+        head = head -> next;
+    }
+    printf("%d", head->data);
+    printf("\n");
 }
