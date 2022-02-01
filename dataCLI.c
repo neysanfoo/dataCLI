@@ -17,6 +17,7 @@ int main(void)
             "3. Stack\n"
             "4. Queue\n"
             "5. Binary Search Tree\n"
+            "6. Exit\n"
             "Please choose a data structure: ");
     scanf("%d", &choice);
     switch (choice)
@@ -32,6 +33,9 @@ int main(void)
         case 4:
             break;
         case 5:
+            break;
+        case 6:
+            return 0;
             break;
     }    
 }

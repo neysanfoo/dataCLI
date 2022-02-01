@@ -15,6 +15,7 @@ LinkedListNode *InsertAtStart(LinkedListNode *head, int data);
 LinkedListNode *InsertAtEnd(LinkedListNode *head, int data);
 LinkedListNode *InsertAtN(LinkedListNode *head, int n, int data);
 LinkedListNode *DeleteAtN(LinkedListNode *head, int n);
+LinkedListNode *Reverse(LinkedListNode *head);
 
 int LinkedListMain(void)
 {
@@ -58,6 +59,10 @@ int LinkedListMain(void)
                 printList(head);
                 break;
             case 6:
+                head = Reverse(head);
+                printList(head);
+                break;
+            case 7:
                 return 0;
                 break;
         }
@@ -157,7 +162,8 @@ void PromptList()
             "3. Insert at Nth position\n"
             "4. Delete at Nth position\n"
             "5. Print List\n"
-            "6. Exit\n"
+            "6. Reverse List\n"
+            "7. Exit\n"
             "Please choose an action: ");
 }
 
@@ -192,4 +198,20 @@ void printList(LinkedListNode *head)
     }
     printf("%d", head->data);
     printf("\n");
+}
+
+LinkedListNode *Reverse(LinkedListNode *head)
+{
+    LinkedListNode *current, *prev, *next;
+    current = head;
+    prev = NULL;
+    while (current != NULL)
+    {
+        next = current -> next;
+        current -> next = prev;
+        prev = current;
+        current = next;
+    }
+    head = prev;
+    return head;
 }
