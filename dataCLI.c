@@ -10,6 +10,13 @@ typedef struct LinkedListNode
     struct LinkedListNode *next;
 } LinkedListNode;
 
+typedef struct BTNode
+{
+    int data;
+    struct BTNode *left;
+    struct BTNode *right;
+} BTNode;
+
 void printList(LinkedListNode *head)
 {
     if (head == NULL)
@@ -31,7 +38,7 @@ void printList(LinkedListNode *head)
 #include "array.h"
 #include "queue.h"
 #include "stack.h"
-
+#include "binary_tree.h"
 
 int main(void)
 {
@@ -60,6 +67,7 @@ int main(void)
             StackMain();
             break;
         case 5:
+            BTMain();
             break;
         case 6:
             return 0;

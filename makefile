@@ -1,5 +1,5 @@
 all: clean
-	gcc stack.c linked_list.c queue.c array.c dataCLI.c -o output
+	gcc binary_tree.c stack.c linked_list.c queue.c array.c dataCLI.c -o output
 
 clean:
 	rm -f main

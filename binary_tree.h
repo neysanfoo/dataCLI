@@ -1,0 +1,14 @@
+BTNode *GetNewNode(BTNode *root, int data);
+BTNode *InsertBTNode(BTNode *root, int data);
+void PrintBTPreorder(BTNode *root);
+void PrintBTInorder(BTNode *root);
+void padding ( char ch, int n );
+void printTree(BTNode *root, int depth);
+void PrintBTPostorder(BTNode *root);
+bool Search(BTNode *root, int target);
+int FindMin(BTNode *root);
+int FindMax(BTNode *root);
+int FindHeight(BTNode *root);
+BTNode *DeleteBTNode(BTNode *root, int data);
+void PromptBT();
+int BTMain(void);
