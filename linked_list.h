@@ -1,11 +1,4 @@
-typedef struct LinkedListNode
-{
-    int data;
-    struct LinkedListNode *next;
-} LinkedListNode;
-
 int LinkedListMain(void);
-void printList(LinkedListNode *head);
 void PromptList();
 bool IsEmptyList(LinkedListNode *head);
 LinkedListNode *InsertAtStart(LinkedListNode *head, int data);

@@ -184,21 +184,21 @@ void printListAddress(LinkedListNode *head)
     printf("\n");
 }
 
-void printList(LinkedListNode *head)
-{
-    if (head == NULL)
-    {
-        printf("Empty list\n");
-        return;
-    }
-    while (head->next != NULL)
-    {
-        printf("%d --> ", head->data);
-        head = head -> next;
-    }
-    printf("%d", head->data);
-    printf("\n");
-}
+// void printList(LinkedListNode *head)
+// {
+//     if (head == NULL)
+//     {
+//         printf("Empty list\n");
+//         return;
+//     }
+//     while (head->next != NULL)
+//     {
+//         printf("%d --> ", head->data);
+//         head = head -> next;
+//     }
+//     printf("%d", head->data);
+//     printf("\n");
+// }
 
 LinkedListNode *Reverse(LinkedListNode *head)
 {
